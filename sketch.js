@@ -73,7 +73,7 @@ function draw() {
   text("Score: "+ score, 500,50);        
   
   
-    if(obstaclesGroup.isTouching(monkey)){
+    if(obstaclesGroup.isTouching(monkey) || score === 500){
         ground.velocityX = 0;
         monkey.velocityY = 0;
         obstaclesGroup.setVelocityXEach(0);
@@ -84,10 +84,10 @@ function draw() {
     
       }
 
-      if (score === 500){
+      /*if (score === 500){
         monkey.velocityY = 0;
         FoodGroup.destroy();
-        obstaclesGroup.destroy();
+        obstaclesGroup.destroy();*/
       }
   
   stroke("black");
